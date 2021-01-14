@@ -27,7 +27,7 @@ A practical exercise to code part of the implementation of eval function
 
 (my-eval '(my-map my-plus [5 5 5] [5 5 5]))                         ; [10 10 10]
 
-;; Evaluating my-map function ...
+;; Evaluating my-let function ...
 (my-eval '(my-let [a 5] (my-plus a 10)))                            ; 15
 
 (my-eval '(my-let [a 500] (my-let [b 500 c 500] (my-plus a b c))))  ; 1500
