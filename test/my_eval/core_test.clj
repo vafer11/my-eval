@@ -42,5 +42,6 @@
     (is (=  [20 21 22 23] (my-eval '((my-fn [l] (my-map my-inc l)) [19 20 21 22]))))
     (is (= [200 400] (my-eval '((my-fn [s1 s2] (map my-plus s1 s2)) [100 200] [100 200]))))
     (is (= "Hi Valentin" (my-eval '((my-fn [w1 space w2] (my-str w1 space w2)) "Hi" " " "Valentin"))))
+    (is (= 19 (my-eval '(my-let [a 10] ((my-fn [b c] (my-plus a b c)) 4 5)))))
     (is (=  [100 400 900 1600]) (my-eval '((my-fn [t1 t2 t3 t4]
                                                  (my-map my-times [100 200 300 400] (list t1 t2 t3 t4))) 1 2 3 4)))))
