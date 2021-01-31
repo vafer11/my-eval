@@ -48,7 +48,6 @@
     (vector? exp) :eval-vector
     (or (number? exp) (string? exp)) :eval-number-string
     (and (list? exp) (= 'my-let (first exp))) :eval-my-let-fun
-    ;(and (list? exp) (= 'my-map (first exp))) :eval-my-map-fun
     (and (list? exp) (list? (first exp)) (= 'my-fn (first (first exp)))) :eval-my-fn-fun
     (list? exp) :eval-list
     :else "Error syntax..."))
